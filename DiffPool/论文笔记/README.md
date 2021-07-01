@@ -52,3 +52,14 @@ layer l:
 加入后模型需要更长的时间收敛，但训练的效果更好。
 
 ## 实验
+蛋白质，社交网络，科学论文
+
+enzymes:两个pooling层，graphsage，每个pooling层后节点数变为25%，sage后进行batchnorm，l2正则化可以增加model稳定性。
+
+diffpool-det：using a deterministic graph clustering algorithm
+
+diffpool-nolp：link prediction is turned off
+
+#### dense & sparse subgraph structure
+
+密集链接的子图更容易被划分为一个cluster，密集子图中的消息传递与结构信息能够有效地被gnn学习，稀疏的部分则不行，需要pooling层保留其结构信息。
