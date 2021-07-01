@@ -3,7 +3,8 @@
 ## 传统gnn的局限
 
 - 通过边上信息的传播，即综合local structure得到node的embedding，但对于图分类任务，缺失整张图的粗略的层级结构的信息，所有的节点都被放在同一层进行处理，问题很大。
-- 简单的sum或是基于集合操作的前馈神经网络，这种global pool的方式忽略了图中可能存在的层次结构
+- 简单的sum或是基于集合操作的前馈神经网络，这种global pool的方式忽略了图中可能存在的层次结构。
+- Google的cost model中尝试用lstm & transformer encoder等reduction的方式对node embedding进行结合graph整体信息的整合，后续工作中可以对比一下这两种方法的效果。
 
 ## 基本思想
 
