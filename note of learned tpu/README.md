@@ -11,7 +11,7 @@
 - edge direction：在操作融合任务中可提供3.8%的平均错误率减少，tile-size任务中无关
 - static performance features: kernel features from xla compiler including : 1.number of floating point operations; 2.amount of data read in bytes; 3.amount of data being written in bytes; 4.number of instructions executing on a spectial functional unit.
 
-		fusion : 5%; tile-size: much less.
+fusion : 5%; tile-size: much less.
 
 ![截图](71906ad2fb6342e56da74fda738c9aa7.png)
 
