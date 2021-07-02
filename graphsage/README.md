@@ -12,3 +12,7 @@
 可用的数据集包含cora、citeseer、pumbed，聚合函数包括mean、pool、lstm、gcn，注意到在gcn聚合函数下，graphsage相当与Kipf et al所提出GCN的归纳扩展版本。
 
 此代码在整张图上训练node embedding，minibatch的实现请参考原仓库。
+
+`python cost_model.py`
+
+目前还很简陋，命令行输入参数也还没写，输入的数据是自己随便rand了一下。
