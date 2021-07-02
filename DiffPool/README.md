@@ -19,3 +19,4 @@
 `python train.py --dataset DD --pool_ratio 0.15 --num_pool 1  --batch-size 10`
 
 模型修改进行中......
+在model文件夹里写了一个cost_model.py，基本是encoder.py的复制，就改了一下损失函数。
