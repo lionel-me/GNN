@@ -21,3 +21,5 @@
 模型修改进行中......
 
 在model文件夹里写了一个cost_model.py，基本是encoder.py的复制，就改了一下损失函数。
+
+可通过将train.py中17行的encoder改为cost_model来调用cost_model中的DiffPool类。
