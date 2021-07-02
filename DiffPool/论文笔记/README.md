@@ -53,7 +53,7 @@ layer l:
 加入后模型需要更长的时间收敛，但训练的效果更好。
 
 ## 实验
-蛋白质，社交网络，科学论文
+蛋白质，社交网络，科学论文之类的
 
 enzymes:两个pooling层，graphsage，每个pooling层后节点数变为25%，sage后进行batchnorm，l2正则化可以增加model稳定性。
 
