@@ -5,6 +5,8 @@
 
 鉴于cost model为回归而非分类任务，目前想法是用MSE代替模型中原本的交叉熵损失函数。
 
+[dgl 原仓库地址](https://github.com/dmlc/dgl/tree/master/examples/pytorch/diffpool)
+
 ## Requirements
 - pytorch 1.0+
 - dgl
