@@ -24,11 +24,13 @@ class GraphSageLayer(nn.Module):
         self.use_bn = bn
         self.bundler = Bundler(in_feats, out_feats, activation, dropout,
                                bias=bias)
+        #连接h，c并过全连接层与激活函数
         self.dropout = nn.Dropout(p=dropout)
 
         if aggregator_type == "maxpool":
             self.aggregator = MaxPoolAggregator(in_feats, in_feats,
                                                 activation, bias)
+                                                #先过全连接层，再选max
         elif aggregator_type == "lstm":
             self.aggregator = LSTMAggregator(in_feats, in_feats)
         else:
@@ -41,7 +43,7 @@ class GraphSageLayer(nn.Module):
             device = h.device
             self.bn = nn.BatchNorm1d(h.size()[1]).to(device)
         g.update_all(fn.copy_src(src='h', out='m'), self.aggregator,
-                     self.bundler)
+                     self.bundler)#消息、聚合、更新函数
         if self.use_bn:
             h = self.bn(h)
         h = g.ndata.pop('h')
