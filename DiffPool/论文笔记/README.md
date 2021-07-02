@@ -16,7 +16,7 @@
 
 - 最大的挑战：设计在不同结构的图中能够通用的pooling strategy
 
-#### pooling with an assignment matrix
+### pooling with an assignment matrix
 
 layer l:
 
@@ -26,7 +26,7 @@ layer l:
 
 注意到这里的邻接矩阵A带有边的权重信息
 
-#### learning the assignment matrix S(l)
+### learning the assignment matrix S(l)
 
 分别使用两个不同的gnn网络生成node embedding和assignment matrix
 
@@ -36,7 +36,7 @@ layer l:
 
 在最后一层S为全一的向量，将所有的cluster聚合为一个节点。
 
-#### how to train
+### how to train
 
 实验证明仅仅利用梯度信息很难训练好pooling层；
 
@@ -61,6 +61,6 @@ diffpool-det：using a deterministic graph clustering algorithm
 
 diffpool-nolp：link prediction is turned off
 
-#### dense & sparse subgraph structure
+### dense & sparse subgraph structure
 
 密集链接的子图更容易被划分为一个cluster，密集子图中的消息传递与结构信息能够有效地被gnn学习，稀疏的部分则不行，需要pooling层保留其结构信息。
