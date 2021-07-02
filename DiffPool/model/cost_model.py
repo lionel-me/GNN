@@ -17,3 +17,9 @@ from dgl.data import tu
 from model.encoder import DiffPool
 from data_utils import pre_process
 
+class Costmodel(nn.Module):
+    """
+    google cost model v2
+    """
+
+    
