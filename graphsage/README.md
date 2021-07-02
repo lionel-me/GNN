@@ -10,3 +10,5 @@
 `python graphsage.py --dataet cora --aggregator-type mean --gpu 0`
 
 可用的数据集包含cora、citeseer、pumbed，聚合函数包括mean、pool、lstm、gcn，注意到在gcn聚合函数下，graphsage相当与Kipf et al所提出GCN的归纳扩展版本。
+
+此代码在整张图上训练node embedding，minibatch的实现请参考原仓库。
