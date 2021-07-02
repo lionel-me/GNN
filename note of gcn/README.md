@@ -4,7 +4,7 @@
 
 借助于图的拉普拉斯矩阵（L = D - A，其中D为顶点的度矩阵（对角），A为邻接矩阵）的特征值和特征向量来研究图的性质；
 
-注意到很多gcn理论用到了normalized Laplacian of graph ：I-D^(-1/2)AD^(-1/2)，即D^(-1/2)LD^(-1/2);
+注意到很多gcn理论用到了Normalized Laplacian of graph ：I-D^(-1/2)AD^(-1/2)，即D^(-1/2)LD^(-1/2);
 
 ![截图](a9ae870d8d68e8ce7881e6b56e3827d6.png)
 
