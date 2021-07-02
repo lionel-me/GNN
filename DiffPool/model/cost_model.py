@@ -213,7 +213,7 @@ class DiffPool(nn.Module):
         '''
         #softmax + CE
         criterion = nn.MSELoss()
-        loss = criterion(pred, label)
+        loss = criterion(pred, label.float())
         for diffpool_layer in self.diffpool_layers:
             for key, value in diffpool_layer.loss_log.items():
                 loss += value
