@@ -29,4 +29,4 @@
 
 在[dgl.dataset.TUDataset](http://docs.dgl.ai/api/python/dgl.data.html#tu-dataset)中提供了图分类，回归的多种数据集以供调用，具体文档可参考其中给出的链接
 
-http://chrsmrrs.github.io/dataset/docs/datasets
+https://chrsmrrs.github.io/datasets/docs/datasets
