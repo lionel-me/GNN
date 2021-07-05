@@ -30,3 +30,7 @@
 在[dgl.dataset.TUDataset](http://docs.dgl.ai/api/python/dgl.data.html#tu-dataset)中提供了图分类，回归的多种数据集以供调用，具体文档可参考其中给出的链接
 
 https://chrsmrrs.github.io/datasets/docs/datasets
+
+## Results
+
+在enzymes数据集上进行了400轮训练，得到测试集上准确率为60%，稍逊于论文中提及的64.23%
