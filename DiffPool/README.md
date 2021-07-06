@@ -23,3 +23,14 @@
 在model文件夹里写了一个cost_model.py，基本是encoder.py的复制，就改了一下损失函数。
 
 可通过将train.py中17行的encoder改为cost_model来调用cost_model中的DiffPool类。
+
+## Datasets
+在计算图与运行时间数据集未知的情况下，先寻找别的graph regession的数据集，测试修改损失函数后能否有预想的训练效果。
+
+在[dgl.dataset.TUDataset](http://docs.dgl.ai/api/python/dgl.data.html#tu-dataset)中提供了图分类，回归的多种数据集以供调用，具体文档可参考其中给出的链接
+
+https://chrsmrrs.github.io/datasets/docs/datasets
+
+## Results
+
+在enzymes数据集上进行了400轮训练，得到测试集上准确率为60%，稍逊于论文中提及的64.23%
