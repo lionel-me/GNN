@@ -34,3 +34,8 @@ https://chrsmrrs.github.io/datasets/docs/datasets
 ## Results
 
 在enzymes数据集上进行了400轮训练，得到测试集上准确率为60%，稍逊于论文中提及的64.23%
+
+## QM9
+`python train_regression.py --pool_ratio 0.10 --num_pool 1 --epoch 40 --load_epoch 30`
+
+train_regression.py 修改自train.py，默认调用了dgl中的QM9数据集，选择cut off = 2来减少图中边的数量，使其性质接近cost model中的计算图，先选择12个regression target中的第一个'mu'，进行回归训练，目前正在训练中，看起来正在收敛。
