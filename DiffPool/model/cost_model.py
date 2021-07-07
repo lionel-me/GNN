@@ -161,7 +161,8 @@ class DiffPool(nn.Module):
     def forward(self, g):
         self.link_pred_loss = []
         self.entropy_loss = []
-        h = g.ndata['feat']
+        h = torch.cat((g.ndata['R'],g.ndata['Z'].reshape(g.num_nodes(),1)),1)
+        #h = g.ndata['R']
         # node feature for assignment matrix computation is the same as the
         # original node feature
         h_a = h
@@ -213,6 +214,7 @@ class DiffPool(nn.Module):
         '''
         #softmax + CE
         criterion = nn.MSELoss()
+        #print(pred,label)
         loss = criterion(pred, label.float())
         for diffpool_layer in self.diffpool_layers:
             for key, value in diffpool_layer.loss_log.items():
