@@ -27,3 +27,8 @@ m次长度为l的walk，形成张量X（*m x l x dx*），用于后续训练
 #### crawl layer
 
 ![截图](88d2b806100203385068a8716c00db6a.png)
+
+## virtual node
+
+创建一个和图中所有节点相连的虚拟节点，节点有其特殊的更新方式
+allows global information flow after each layer
