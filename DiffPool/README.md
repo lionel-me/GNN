@@ -51,4 +51,4 @@ loss为mse，由于回归的label mu有些数据接近0，在此先不适用mape
 
 同时在lr=0.001，训练400epochs后的模型参数基础上又进行了训练，观察到训练集的mae仍在下降但验证集上的mae基本停滞，猜想模型已经在训练集上过拟合。
 
-下一步计划，选取数据集的alpha回归参数作为kernel feature加入特征，并将原本的node feature Z即原子序号作为opcode进行embedding，总之使数据集尽量贴近将要拿到的cost model数据集的特性并进行训练，在此基础之上调整模型的参数
+下一步计划，选取数据集的alpha回归参数作为kernel feature加入特征，并将原本的node feature Z即原子序号作为opcode进行embedding，总之使数据集尽量贴近将要拿到的cost model数据集的特性并进行训练，在此基础之上调整模型的参数，opcode embedding目前想到有通过一个fc和直接onehot的方法，之后对比一下看看效果
