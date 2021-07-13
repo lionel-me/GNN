@@ -40,6 +40,12 @@ https://chrsmrrs.github.io/datasets/docs/datasets
 
 train_regression.py 修改自train.py，默认调用了dgl中的QM9数据集，选择cut off = 2来减少图中边的数量，使其性质接近cost model中的计算图，先选择19个regression target中的第一个'mu'，进行回归训练，目前正在训练中，看起来正在收敛。
 loss为mse，由于回归的label mu有些数据接近0，在此先不适用mape而是用mae来考察模型的训练效果。
+### 训练设置
+考虑到最终目标为：对于同一张计算图（graph）与不同的编译参数（kernel feature）辅助编译器选择最优的编译参数，因此模型输出结果的大小排序很重要，可能不需要预测的结果绝对的精准，只需要能够选择出最优的编译方式即可。
+
+考虑用kendall's tau检测模型的训练效果
+
+考虑可以将模型的loss函数进行调整，参考google论文中的pair rank loss函数
 ### 训练参数与结果
 训练的过程中经历了一系列服务器使用与gpu有效利用的问题，主要原因在于本人的经验不足，在此不表。
 
